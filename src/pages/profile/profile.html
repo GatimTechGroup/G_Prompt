@@ -1,0 +1,131 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Guardian </ion-title>
+    <button ion-button class="iconval">
+      <ion-icon name="power" (click)='logout()'></ion-icon>
+    </button>
+    </ion-navbar>
+</ion-header>
+<ion-content padding class="transparent-header">
+
+  <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + background.coverImage +')'}"></div>
+  <div id="content">
+    <div id="profile-info" padding>
+      <img id="profile-image" src="./assets/img/avatar/ian-avatar.png" >
+      <h3 id="profile-name">Name :{{user.FirstName}}{{user.LastName}}</h3>
+      <p> DateOfBirth :{{user.DOB}} Age :{{user.Age}} </p>
+       <p class="profile-InsuranceCompany">InsuranceCompany:{{user.InsuranceCompany}}</p>
+          <p class="profile-description">PolicyNumber :{{user.PolicyNumber}}</p>
+     
+    </div>
+    <hr/>
+ 
+
+<ion-row class="row">
+<ion-col>
+			<ion-card responsive-sm style="background: coral" (click)="presentProfileModal()">
+				<ion-card-content class="card-content">
+					<h1 style="text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;">Video Chat</h1>
+   
+          	</ion-card-content>
+			</ion-card>
+    </ion-col>
+    
+</ion-row>
+  <ion-row class="row"> 
+ <ion-col width-50>
+			<ion-card  responsive-sm  style="background: blueviolet" (click)="getTeleHealthdata()">  
+				<ion-card-content class="card-content">
+					<h1 style="text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;">Tele Health</h1>
+   
+          	</ion-card-content>
+			</ion-card> 
+    </ion-col>
+  </ion-row>
+<ion-row class="row">
+<ion-col >
+			<ion-card responsive-sm  style="background: aqua">
+				<ion-card-content class="card-content">
+					<h1 style="text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;">My Reports</h1>
+    
+          	</ion-card-content>
+			</ion-card>
+    </ion-col>
+    
+</ion-row>
+  <ion-row class="row">
+ <ion-col >
+			<ion-card responsive-sm  style="background: brown">
+				<ion-card-content class="card-content">
+					<h1 style="text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;">My vitals</h1>
+   
+          	</ion-card-content>
+			</ion-card>
+    </ion-col>
+  </ion-row>
+
+<ion-row class="row">
+<ion-col >
+			<ion-card responsive-sm  style="background: cadetblue">
+				<ion-card-content class="card-content">
+					<h1 style="text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;">My Hospital admits/discharges</h1>
+    
+          	</ion-card-content>
+			</ion-card>
+    </ion-col>
+   
+</ion-row>
+  <ion-row class="row">
+ <ion-col >
+			<ion-card responsive-sm  style="background: darkcyan">
+				<ion-card-content class="card-content">
+					<h1 style="text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;">My health care providers</h1>
+  
+          	</ion-card-content>
+			</ion-card>
+    </ion-col> 
+
+
+  </ion-row>
+  <ion-row class="row">
+<ion-col >
+			<ion-card responsive-sm  style="background:rosybrown">
+				<ion-card-content class="card-content">
+					<h1 style="text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;">My Medications</h1>
+    
+          	</ion-card-content>
+			</ion-card>
+    </ion-col>
+   
+</ion-row>
+  <ion-row class="row">
+<ion-col >
+			<ion-card responsive-sm  style="background: forestgreen">
+				<ion-card-content class="card-content">
+					<h1 style="text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;">My Medical Problems</h1>
+  
+          	</ion-card-content>
+			</ion-card>
+    </ion-col> 
+  </ion-row>
+  </div>
+</ion-content>
